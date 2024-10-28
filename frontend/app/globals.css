@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", serif;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+li {
+  list-style-type: none;
+}
+li.sub {
+  list-style-type: circle;
+}
+li::marker {
+  display: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* DateRangePicker.css */
+
+/* Calendar Wrapper */
+.react-datepicker {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  font-size: 12px;
+}
+
+/* Header styling */
+.react-datepicker__header {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* Navigation arrows */
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  color: #333333;
+}
+
+/* Day styling */
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 0;
+  color: #333333;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Inactive days (next month, previous month) */
+.react-datepicker__day--outside-month {
+  color: #cccccc;
+}
+
+/* Today’s date */
+.react-datepicker__day--today {
+  border: 1px solid #007bff;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Clear button styling */
+.clear-button {
+  color: #888888;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 8px;
+}
