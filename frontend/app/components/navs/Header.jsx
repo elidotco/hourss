@@ -1,6 +1,4 @@
 import React from "react";
-import DropdownNotification from "../DropdownNotification";
-import DarkModeSwitcher from "../DarkModeSwitcher";
 import DropdownUser from "../DropdownUser";
 
 const Header = ({ sidebarOpen, setSidebarOpen }) => {
@@ -54,8 +52,6 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
 
       {/* Header Title or Content */}
       <div className="flex gap-3 lg:gap-10 items-center">
-        <DarkModeSwitcher />
-        <DropdownNotification />
         <div className="border-l pl-2 md:pl-4">
           {" "}
           <DropdownUser />
